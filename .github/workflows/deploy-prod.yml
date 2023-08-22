@@ -11,7 +11,7 @@ jobs:
         with:
           ref: main
       - uses: ./.github/actions/build
-      - run: "Branch is $(git rev-parse --abbrev-ref HEAD)"
+      - run: echo "Branch is $(git rev-parse --abbrev-ref HEAD)@$( git rev-parse HEAD)"
       - run: echo "Deploying to prod ..."
 
 
