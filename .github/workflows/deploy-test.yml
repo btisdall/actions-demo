@@ -1,0 +1,21 @@
+name: Deploy Branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      branchName:
+        type: string
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: "${{ inputs.branchName }}"
+      - uses: ./.github/actions/build
+      - run: echo "Deploying ${{ inputs.branchName }} ..."
+
+
+
