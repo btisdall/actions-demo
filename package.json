@@ -1,0 +1,16 @@
+{
+  "name": "actions-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo TEST",
+    "lint": "echo LINT"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.2"
+  }
+}

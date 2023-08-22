@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-action
+
+name: Build
+description: Build and Test
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+    - run: npm ci
+      shell: bash
+    - run: npm run lint
+      shell: bash
+    - run: npm t
+      shell: bash
